@@ -1,0 +1,140 @@
+{"data":{"graphQLHub":"Use GraphQLHub to explore popular APIs with GraphQL! Created by Clay Allsopp
+  @clayallsopp","hn": {"topStories":[ {"title":"Apple confirms it uses Google cloud for some of
+    iCloud",
+    "url":"https://www.cnbc.com/2018/02/26/apple-confirms-it-uses-google-cloud-for-icloud.html",
+    "timeISO":"2018-02-26T14:10:48.000Z", "by":{"id":"uptown"}, "kids":[{
+      "timeISO":"2018-02-26T14:32:49.000Z", "by":{"id":"oflannabhra"}, "text":"From AppleΓÇÖs actual
+      iCloud security document:<p>&gt; Each file is broken into chunks and encrypted by iCloud using
+      AES-128 and a key derived from each chunkΓÇÖs contents that utilizes SHA-256. The keys and the
+      fileΓÇÖs metadata are stored by Apple in the userΓÇÖs iCloud account. The encrypted chunks of
+      the file are stored, without any user-identifying information, using third-party storage
+      services, such as S3 and Google Cloud Platform.<p>From what IΓÇÖve heard, AppleΓÇÖs services
+      run on their own cloud platform called Pie [0]. It sounds like this platform probably
+      abstracts away whatever storage service is used, allowing Apple to use whatever fits their
+      requirements.<p>[0] - <a
+      href=\"https:&#x2F;&#x2F;9to5mac.com&#x2F;2016&#x2F;10&#x2F;06&#x2F;report-unified-cloud-services-backend-pie-platform&#x2F;\"
+      rel=\"nofollow\">https:&#x2F;&#x2F;9to5mac.com&#x2F;2016&#x2F;10&#x2F;06&#x2F;report-unified-cloud-services...</a>"},
+                                         
+                                          {"timeISO":"2018-02-26T15:06:23.000Z",
+                                            "by":{"id":"kziojzwsndppqgg"}, "text":"Apple runs
+                                            absolutely ludicrous amounts of its own storage. The
+                                            idea that they use GCP for 100% of anything is
+                                            insane.<p>Saying they ΓÇ£use GCP for iCloudΓÇ¥ sounds
+                                            intentionally misleading... thereΓÇÖs a missing
+                                            qualifier there.  But I guess ΓÇ£uses GCP for some stuff
+                                            in iCloudΓÇ¥ isnΓÇÖt nearly as click-worthy I
+                                            guess."}]},
+                    
+                     {"title":"Lost Art of Bending Over: How Other Cultures Spare Their Spines",
+                       "url":"https://www.npr.org/sections/health-shots/2018/02/26/587735283/lost-art-of-bending-over-how-other-cultures-spare-their-spines",
+                       "timeISO":"2018-02-26T14:07:49.000Z", "by":{"id":"happy-go-lucky"}, "kids":[{
+                         "timeISO":"2018-02-26T18:16:21.000Z", "by":{"id":"40acres"}, "text":"Anyone
+                         who&#x27;s performed a deadlift knows the hip hinge. I recently was testing
+                         my one rep max and due to fatigue my back arched instead of doing a proper
+                         hip hinge. The pain stayed with me for days and was pretty agonizing. This
+                         was about 5-6 weeks ago. Since then I&#x27;ve been deadlifting perfectly
+                         w&#x2F;o pain."},
+                                         
+                                          {"timeISO":"2018-02-26T16:37:14.000Z",
+                                            "by":{"id":"andrewla"}, "text":"The strangest thing
+                                            about this is that children know this without any input,
+                                            and then go bad.  I&#x27;ve watched my older son (now 5)
+                                            go from having a perfect squat and hip hinge to starting
+                                            to bend over &quot;like an adult&quot; with the arched
+                                            back.<p>There must be some reason that everyone, to some
+                                            good approximation -- I&#x27;m in the US and this is
+                                            what I see, does this the wrong way.  Even people who
+                                            know better seem to require conscious effort to do the
+                                            motion correctly, myself included.<p>Maybe it&#x27;s
+                                            because squatting and hip hinging are thing that require
+                                            that you work into the position, rather than
+                                            &quot;falling&quot; into it.  It is strange that it
+                                            follows cultural lines; possibly it&#x27;s just
+                                            imitating what people around you are doing, so fixing
+                                            this would require some pretty large-scale
+                                            brainwashing."}]},
+                    
+                     {"title":"Wolfenstein's original rendering engine as 450 line shader with no
+                       external data", "url":"https://www.shadertoy.com/view/4sfGWX",
+                       "timeISO":"2018-02-26T13:25:52.000Z", "by":{"id":"ingve"}, "kids":[{
+                         "timeISO":"2018-02-26T15:44:08.000Z", "by":{"id":"nimbius"}, "text":"This
+                         game was responsible for two amazing moments in my childhood.<p>1.
+                         Realizing I wanted to be a computer programmer<p>2.  My parents being
+                         confronted by school administrators because I was whistling Horst Wessel
+                         Lied, or as i called it &quot;the cool Wolfenstein song.&quot; at school
+                         frequently."},
+                                         
+                                          {"timeISO":"2018-02-26T15:55:05.000Z", "by":{"id":"gpm"},
+                                            "text":"The aliasing in this was driving me insane,
+                                            fortunately it&#x27;s really easy to implement anti
+                                            aliasing.<p>Change the function signature of the current
+                                            main function to<p><pre><code>    vec3 getColor(in vec2
+                                              fragCoord ) {\n</code></pre>\nAnd the last line
+                                                to<p><pre><code>    return col\n</code></pre>\nThen
+                                                just call it a bunch of times with nearby points in
+                                                a new main function<p><pre><code>    void mainImage(
+                                                  out vec4 fragColor, in vec2 fragCoord ) {\n
+                                                    vec3 c1 = getColor(fragCoord + vec2( 0.25,
+                                                      0.25));\n        vec3 c2 = getColor(fragCoord
+                                                      + vec2( 0.25, -0.25));\n        vec3 c3 =
+                                                      getColor(fragCoord + vec2(-0.25,  0.25));\n
+                                                      vec3 c4 = getColor(fragCoord + vec2(-0.25,
+                                                        -0.25));\n \n        fragColor = vec4((c1 +
+                                                        c2 + c3 + c4) &#x2F; 4., 1.0);\n
+                                                  }\n</code></pre>\nObviously this does 4x the
+                                                  amount of work as without antialiasing, but with
+                                                  modern hardware you don&#x27;t notice it and it
+                                                  looks <i>way</i> better."}]},
+                                         
+                     {"title":"Apple Plans Giant High-End iPhone, Lower-Priced Model",
+                       "url":"https://www.bloomberg.com/news/articles/2018-02-26/apple-is-said-to-plan-giant-high-end-iphone-lower-priced-model",
+                       "timeISO":"2018-02-26T17:41:54.000Z", "by":{"id":"uptown"}, "kids":[{
+                         "timeISO":"2018-02-26T18:12:21.000Z", "by":{"id":"oflannabhra"},
+                         "text":"&gt; Despite months of breathless hype, the iPhone X hasnΓÇÖt sold
+                         as well as expected since its debut last year. Apple sold 77.3 million
+                         iPhones in the final quarter of 2017, below analystsΓÇÖ projections of 80.2
+                         million units.  Some consumers were turned off by the iPhone XΓÇÖs $1,000
+                         price despite liking the design even as they wanted something more
+                         cutting-edge than the cheaper iPhone 8. With its next lineup, Apple is
+                         seeking to rekindle sales by offering a model for everyone.<p>This seems
+                         like color commentary that isn&#x27;t supported by their sources, or data.
+                         I&#x27;m not sure how they are supporting this statement. Apple&#x27;s
+                         recent quarterly earnings [0] showed iPhone sales as (essentially) stable,
+                         year over year. ASP increased to $800 dollars (!) which would point to the
+                         iPhone X doing relatively well, despite not being available for the entire
+                         quarter.<p>Even beyond that, there is no way for Apple to begin product
+                         development at a point <i>after</i> they saw the Q4 results. There is far
+                         to much lead-time required for them to be able to wait until now to do
+                         so.<p>My guess is that 1) the rumors of these 2 new models are true, 2)
+                         Apple committed to this product roadmap a long time ago, and 3) Bloomberg
+                         is adding it&#x27;s own spin to make the leaks more salacious.<p>[0] - <a
+                         href=\"https:&#x2F;&#x2F;sixcolors.com&#x2F;post&#x2F;2018&#x2F;02&#x2F;apple-reports-its-holiday-2017-earnings-today&#x2F;\"
+                         rel=\"nofollow\">https:&#x2F;&#x2F;sixcolors.com&#x2F;post&#x2F;2018&#x2F;02&#x2F;apple-reports-its-holiday...</a>"},
+                                         
+                                          {"timeISO":"2018-02-26T17:59:37.000Z",
+                                            "by":{"id":"taylodl"}, "text":"&quot;<i>Apple has tried
+                                            selling cheaper phones in the past with poor
+                                            results.</i>&quot; I love the iPhone SE. They can keep
+                                            gradually improving that model and I&#x27;m good."}]},
+                                         
+                     {"title":"Goldman-Backed Circle Buys Digital Exchange Poloniex",
+                       "url":"https://www.bloomberg.com/news/articles/2018-02-26/goldman-backed-circle-buys-digital-exchange-poloniex",
+                       "timeISO":"2018-02-26T15:45:46.000Z", "by":{"id":"tesrx"}, "kids":[
+                         {"timeISO":"2018-02-26T17:48:15.000Z", "by":{"id":"baccredited"},
+                           "text":"&#x27;The first thing you need to know about Goldman Sachs is
+                           that it&#x27;s everywhere. The world&#x27;s most powerful investment bank
+                           is a great vampire squid wrapped around the face of humanity,
+                           relentlessly jamming its blood funnel into anything that smells like
+                           money.&#x27;<p><a
+                           href=\"https:&#x2F;&#x2F;www.rollingstone.com&#x2F;politics&#x2F;news&#x2F;the-great-american-bubble-machine-20100405\"
+                           rel=\"nofollow\">https:&#x2F;&#x2F;www.rollingstone.com&#x2F;politics&#x2F;news&#x2F;the-great-america...</a>"},
+                                         
+                                          {"timeISO":"2018-02-26T17:44:06.000Z",
+                                            "by":{"id":"sna1l"}, "text":"I&#x27;m surprised that
+                                            Nasdaq, BATS, or some other conventional equities
+                                            exchange operator hasn&#x27;t gotten into the
+                                            cryptocurrency exchange business.<p>A lot of the issues
+                                            with current exchanges is a combination of scaling
+                                            issues, scaling&#x2F;trust, and regulation. I feel like
+                                            conventional equities exchange would be able to deal
+                                            with those issues quite easily"}]}]}}}
